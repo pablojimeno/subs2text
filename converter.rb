@@ -1,5 +1,5 @@
 # encoding: utf-8
-subs = "subtitle.srt"
+subs = "input.srt"
 
 @regex = /\d\d:\d\d,\d\d\d -->/
 lines = Array.new
@@ -13,8 +13,7 @@ IO.readlines(subs).each_with_index do |line, idx|
   end
 end
 
-
-text = File.open("output.txt", "w") do |f|
+text = File.open("learning.txt", "w") do |f|
   lines.each do |l|
     f.puts l
   end
